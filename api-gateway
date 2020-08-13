@@ -6,6 +6,10 @@ spring:
           uri: lb://sample-service
           predicates:
             - Path=/api/sample/**
+        - id: reactive-sample-service
+          uri: lb://reactive-sample-service
+          predicates:
+            - Path=/api/reactive/**
 
 management:
   endpoints:
