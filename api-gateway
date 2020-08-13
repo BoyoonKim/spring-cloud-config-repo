@@ -1,0 +1,14 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: sample-service
+          uri: lb://sample-service
+          predicates:
+            - Path=/api/sample/**
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
